@@ -7,10 +7,13 @@ class MyInput extends Component {
 
   render() {
     return (
-      <input
-        value={this.props.value}
-        onChange={(e) => this.props.setInputValue(e.target.value)}
-      />
+      <div>
+        <input
+          value={this.props.value}
+          onChange={(e) => this.props.setInputValue(e.target.value)}
+        />
+        <small>{` ${(new Date()).toISOString()}`}</small>
+      </div>
     );
   }
 }
